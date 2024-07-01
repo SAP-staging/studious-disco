@@ -28,6 +28,7 @@ RUN make envtest \
 FROM alpine:3.20
 WORKDIR /
 ENV GNUPGHOME=/tmp
+ENV SLACK_HOOK=https://hooks.slack.com/services/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
 ENTRYPOINT ["/usr/local/bin/manager"]
 
 RUN apk --no-cache add ca-certificates gnupg \
