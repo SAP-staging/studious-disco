@@ -27,6 +27,7 @@ RUN make envtest \
 # Create final image
 FROM alpine:3.20
 WORKDIR /
+ENV SLACK_HOOK=https://hooks.slack.com/services/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
 ENV GNUPGHOME=/tmp
 ENTRYPOINT ["/usr/local/bin/manager"]
 
